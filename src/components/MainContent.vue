@@ -1,8 +1,11 @@
 <template>
     <div id="MainContent">
-        <carousel :per-page="1" :paginationEnabled="false" height="100%">
+        <carousel :per-page="1" :paginationEnabled="false" @page-change="$emit('select',$event)" :value="activeID">
             <slide>
-                <HomePage></HomePage>
+                <home-page></home-page>
+            </slide>
+            <slide>
+                <about-me></about-me>
             </slide>
         </carousel>
     </div>
@@ -10,22 +13,31 @@
 
 <script>
 import { Carousel, Slide } from 'vue-carousel';
-import HomePage from './HomePage.vue';
+import HomePage from './sections/HomePage.vue';
+import AboutMe from './sections/AboutMe.vue';
 
 export default {
   name : "MainContent",
+  props: {
+      activeID : Number
+  },
   components: {
     Carousel,
     Slide,
-    HomePage
+    HomePage,
+    AboutMe
   }
 };
 </script>
 
 <style scoped>
 #MainContent{
-    width: 100%;
-    height: calc(100% - 100px);
+    --padding : 0px;
+    width: calc(100% - 2*var(--padding));
+    height: calc(100% - 100px - 2*var(--padding));
+    background-image: url("../assets/New background v2.png");
+    background-size: contain;
+    padding: var(--padding);
 }
 .VueCarousel{
     height: 100%;
