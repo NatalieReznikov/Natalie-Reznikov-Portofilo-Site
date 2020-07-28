@@ -1,8 +1,8 @@
 <template>
     <div id="NavBar">
-        <SectionButton v-for="slide in Slides" :key="slide.id">
+        <section-button v-for="slide in Slides" :key="slide.id" :id="slide.id" :msg="slide.msg" :activeID="activeID" @selected="$emit('select', slide.id)">
             
-        </SectionButton>
+        </section-button>
     </div>
 </template>
 
@@ -12,23 +12,23 @@ import SectionButton from "./SectionButton.vue";
 export default {
     name : "NavBar",
     props : {
-        Slides: {
-            id : Number,
-            msg : String,
-            press : Function
-        }
+        Slides: Array,
+        activeID : Number
     },
+    
     components : {
         SectionButton
     }
+    
 }
 </script>
 
 <style scoped>
 #NavBar{
     background-color: #282C34;
-    width: 100%;
-    height: 100px;
+    width: calc(100% - 10px);
+    height: 90px;
     padding: 5px;
+    display: flex;
 }
 </style>
