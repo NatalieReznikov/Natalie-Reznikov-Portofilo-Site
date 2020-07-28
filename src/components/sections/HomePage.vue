@@ -10,8 +10,7 @@ export default {
 
 <style scoped>
 #HomePage{
-  background-image: url("../assets/New background v2.png");
-  background-size: contain;
+  background-color: rgba(0, 0, 29, 0.192);
   width: 100%;
   height: 100%;
 }
