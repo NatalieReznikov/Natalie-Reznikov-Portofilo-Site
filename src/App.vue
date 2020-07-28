@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <NavBar></NavBar>
-    <MainContent></MainContent>
+    <nav-bar :activeID="activeID" :Slides="slides" @select="activeID = $event"></nav-bar>
+    <main-content :activeID="activeID" @select="activeID = $event"></main-content>
   </div>
 </template>
 
@@ -11,21 +11,39 @@ import MainContent from './components/MainContent.vue'
 
 export default {
   name: 'App',
+  data :  function() {
+    return {
+      activeID : 0,
+      slides : [{
+            id : 0,
+            msg : 'Home Page'
+          },
+          {
+            id : 1,
+            msg : 'About Me'
+          }
+          ]
+    }
+  },
   components: {
     NavBar, 
     MainContent
   }
 }
+
+
+
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin: 0px;
   height: 100%;
+  font-size: 30px;
 }
 </style>
