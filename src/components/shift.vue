@@ -10,7 +10,7 @@
 
 <style scoped>
 .shift{
-    margin-left: 13px;
+    margin-left: 22px;
     display: block;
     margin-bottom: 10px;
 }

@@ -1,13 +1,15 @@
 <template>
   <div id="HomePage">
-    <div class = "homepage">
-      <h1> <i> <shift>Natalie </shift> Reznikov</i> </h1>
-      <h2>An Engineer in the body of a Biologist </h2>
-    </div>
 
-    <div class = "pfp">
-      <img src = "../../assets/natalie picture_nobg_bw.png">
-    </div>
+      <div class = "homepage">
+        <h1> <i> <shift>Natalie </shift> Reznikov</i> </h1>
+        <h2>An Engineer in the body of a Biologist </h2>
+      </div>
+
+      <div class = "pfp">
+        <img src = "../../assets/natalie picture_nobg_bw.png">
+      </div>
+
   </div>
 </template>
 
@@ -26,26 +28,28 @@
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle at 75% 50%, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0));
+
 }
 
 
-
 .pfp{
-  position: absolute;
+  position: fixed;
   left: 57%;
-  top: -15%;
+  top: -100px;
 
 }
 img{
   width: 775px;
   height: auto;
+  min-width: 775px;
 }
 
 
 .homepage {
-    position: absolute;
-    left: 23%;
-    top: 28%;
+  position: fixed;
+  left: 18%;
+  top: 28%;
+
   }
   .homepage h1 {
     position: static;
