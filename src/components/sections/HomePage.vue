@@ -12,8 +12,12 @@
 </template>
 
 <script>
-export default {
-  name : "HomePage"
+  import shift from "../shift.vue"
+  export default {
+  name : "HomePage",
+  components: {
+    shift
+  }
 }
 </script>
 
@@ -24,11 +28,7 @@ export default {
   background-image: radial-gradient(circle at 75% 50%, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0));
 }
 
-shift{
-  margin-left: 13px;
-  display: block;
-  margin-bottom: 10px;
-}
+
 
 .pfp{
   position: absolute;
