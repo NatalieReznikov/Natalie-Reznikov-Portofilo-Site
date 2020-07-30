@@ -28,7 +28,6 @@
   width: 100%;
   height: 100%;
   background-image: radial-gradient(circle at 75% 50%, rgba(0,0,0,0.95) 30%, rgba(0,0,0,0));
-
 }
 
 
