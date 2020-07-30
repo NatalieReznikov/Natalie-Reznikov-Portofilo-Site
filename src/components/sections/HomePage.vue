@@ -32,31 +32,32 @@ shift{
 
 .pfp{
   position: absolute;
-  left: 60%;
+  left: 57%;
+  top: -15%;
 
 }
 img{
-  width: 550px;
+  width: 775px;
   height: auto;
 }
 
 
 .homepage {
     position: absolute;
-    left: 25%;
-    top: 35%;
+    left: 23%;
+    top: 28%;
   }
   .homepage h1 {
     position: static;
     color: white;
-    font-size: 60px;
+    font-size: 100px;
     text-align: left;
   }
   .homepage h2 {
     position: relative;
-    right: 50px;
+    right: 90px;
     top: -10px;
-    font-size: 35px;
+    font-size: 45px;
   }
 
 </style>
