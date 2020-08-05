@@ -1,15 +1,15 @@
 <template>
-  <div id="AboutMe"></div>
+  <div id="Bio"></div>
 </template>
 
 <script>
 export default {
-  name : "AboutMe"
+  name : "Bio"
 }
 </script>
 
 <style scoped>
-#AboutMe{
+#Bio{
   background-color: rgba(37, 0, 0, 0.205);
   width: 100%;
   height: 100%;
