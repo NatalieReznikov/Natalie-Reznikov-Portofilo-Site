@@ -26,8 +26,8 @@ export default {
 <style scoped>
 #NavBar{
     background-color: #282C34;
-    width: calc(100% - 10px);
-    height: 90px;
+    width: calc(100% - 0px);
+    height: 100px;
     padding: 5px;
     display: flex;
 }

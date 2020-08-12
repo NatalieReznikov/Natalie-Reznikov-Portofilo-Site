@@ -1,16 +1,23 @@
 {
   "name": "nataliereznikov.com",
   "version": "0.1.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "bs-vue-timeline": "^0.1.4",
     "core-js": "^3.6.5",
+    "patch-package": "^6.2.2",
     "vue": "^2.6.11",
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "vue-custom-scrollbar": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",

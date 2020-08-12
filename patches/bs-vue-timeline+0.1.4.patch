@@ -1,0 +1,36 @@
+diff --git a/node_modules/bs-vue-timeline/LICENSE b/node_modules/bs-vue-timeline/LICENSE
+old mode 100644
+new mode 100755
+diff --git a/node_modules/bs-vue-timeline/README.md b/node_modules/bs-vue-timeline/README.md
+old mode 100644
+new mode 100755
+diff --git a/node_modules/bs-vue-timeline/dist/bs-vue-timeline.esm.js b/node_modules/bs-vue-timeline/dist/bs-vue-timeline.esm.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/bs-vue-timeline/dist/bs-vue-timeline.min.js b/node_modules/bs-vue-timeline/dist/bs-vue-timeline.min.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/bs-vue-timeline/dist/bs-vue-timeline.umd.js b/node_modules/bs-vue-timeline/dist/bs-vue-timeline.umd.js
+old mode 100644
+new mode 100755
+index 8b3c9fe..2e12c20
+--- a/node_modules/bs-vue-timeline/dist/bs-vue-timeline.umd.js
++++ b/node_modules/bs-vue-timeline/dist/bs-vue-timeline.umd.js
+@@ -62,7 +62,7 @@
+         if (moment().isSame(momentDate, "month")) {
+           return "Present time";
+         } else {
+-          return momentDate.format("MM YYYY");
++          return momentDate.format("YYYY");
+         }
+       }
+     }
+diff --git a/node_modules/bs-vue-timeline/dist/vue-bs-timeline.esm.js b/node_modules/bs-vue-timeline/dist/vue-bs-timeline.esm.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/bs-vue-timeline/dist/vue-bs-timeline.min.js b/node_modules/bs-vue-timeline/dist/vue-bs-timeline.min.js
+old mode 100644
+new mode 100755
+diff --git a/node_modules/bs-vue-timeline/dist/vue-bs-timeline.umd.js b/node_modules/bs-vue-timeline/dist/vue-bs-timeline.umd.js
+old mode 100644
+new mode 100755
