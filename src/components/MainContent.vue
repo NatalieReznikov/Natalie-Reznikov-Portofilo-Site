@@ -5,7 +5,7 @@
                 <home-page></home-page>
             </slide>
             <slide>
-                <about-me></about-me>
+                <bio></bio>
             </slide>
         </carousel>
     </div>
@@ -14,7 +14,7 @@
 <script>
 import { Carousel, Slide } from 'vue-carousel';
 import HomePage from './sections/HomePage.vue';
-import AboutMe from './sections/AboutMe.vue';
+import Bio from './sections/Bio.vue';
 
 export default {
   name : "MainContent",
@@ -25,7 +25,7 @@ export default {
     Carousel,
     Slide,
     HomePage,
-    AboutMe
+    Bio
   }
 };
 </script>

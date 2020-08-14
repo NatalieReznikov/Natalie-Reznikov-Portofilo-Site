@@ -20,7 +20,7 @@ export default {
           },
           {
             id : 1,
-            msg : 'About Me'
+            msg : 'Bio'
           }
           ]
     }
