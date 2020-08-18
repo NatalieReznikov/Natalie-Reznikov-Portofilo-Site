@@ -47,7 +47,7 @@ export default {
         from: new Date(2014, 0),
         to: new Date(2017, 0),
         title: 'Imperial College London, London, UK',
-        subtitle: 'Postdoctoral Research Fellow, Dept. of Materials, Faculty of Engineering',
+        subtitle: 'Postdoctoral Research Fellow, <br> Dept. of Materials, Faculty of Engineering',
         content: '<em> I developed a biomimetic 3D-printed prosthetic material for repair of large defects of trabecular bone. That novel material mimics bone’s natural shock-absorbing properties as normally found in our joints and vertebrae. Other projects included: Functional adaptation of the human foot bones; Multiscale characterization of heterotopic bone; 3D imaging and analysis of the collagen-mineral interface in bone; 3D characterization of bioglass-bone interface; 3D imaging and quantification of DNA-origami drug carriers.</em>',
         image : 'icl.png'
       },

@@ -28,6 +28,13 @@ export default {
   display: inline-block;
   top: 50%;
   left: 50%;
+  width:80%;
   transform: translate3d(-50%,-50%,0);
 }
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
 </style>
