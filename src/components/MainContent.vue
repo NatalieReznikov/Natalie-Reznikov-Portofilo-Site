@@ -2,7 +2,7 @@
     <div id="MainContent">
         <carousel :per-page="1" :paginationEnabled="false" @page-change="$emit('select',$event)" :value="activeID">
             <slide>
-                <home-page></home-page>
+                <home-page @go-next="$emit('select',activeID+1)" ></home-page>
             </slide>
             <slide>
                 <bio></bio>
