@@ -7,6 +7,9 @@
             <slide>
                 <bio></bio>
             </slide>
+            <slide>
+                <publictions></publictions>
+            </slide>
         </carousel>
     </div>
 </template>
@@ -15,6 +18,7 @@
 import { Carousel, Slide } from 'vue-carousel';
 import HomePage from './sections/HomePage.vue';
 import Bio from './sections/Bio.vue';
+import Publictions from './sections/Publictions.vue';
 
 export default {
   name : "MainContent",
@@ -25,7 +29,8 @@ export default {
     Carousel,
     Slide,
     HomePage,
-    Bio
+    Bio,
+    Publictions
   }
 };
 </script>

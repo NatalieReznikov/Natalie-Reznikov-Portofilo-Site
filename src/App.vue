@@ -21,6 +21,10 @@ export default {
           {
             id : 1,
             msg : 'Bio'
+          },
+          {
+            id : 2,
+            msg : 'Publications'
           }
           ]
     }

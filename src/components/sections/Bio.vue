@@ -1,6 +1,6 @@
 <template>
   <div id="Bio">
-    <vue-custom-scrollbar class="scroll-area"  :swipeEasing="true" :settings="settings">
+    <vue-custom-scrollbar class="scroll-area"  :swipeEasing="true">
       <VueTimeline 
         :timeline-items="timelineItems" 
         :individualClasses="true"
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import VueTimeline from 'bs-vue-timeline'
-import vueCustomScrollbar from 'vue-custom-scrollbar'
+import VueTimeline from 'bs-vue-timeline';
+import vueCustomScrollbar from 'vue-custom-scrollbar';
 
 
 export default {
@@ -22,9 +22,6 @@ export default {
   },
   data : () => (
     {
-      settings: {
-        maxScrollbarLength: 60
-      },
       timelineItems: [
       {
         from: new Date(2018, 0),
