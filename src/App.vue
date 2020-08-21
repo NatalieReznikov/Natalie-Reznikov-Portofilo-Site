@@ -40,12 +40,19 @@ export default {
 </script>
 
 <style>
+:root{
+  --main-color: #282C34;
+  --main-accent: #6FEB95;
+  --secondary-accent: #4C8C65;
+  --text-color: #FFFFFF;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 
 #app {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-color);
   margin: 0px;
   height: 100%;
   font-size: 30px;
