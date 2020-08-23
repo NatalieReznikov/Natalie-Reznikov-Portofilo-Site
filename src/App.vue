@@ -24,7 +24,7 @@ export default {
           },
           {
             id : 2,
-            msg : 'CoverArt'
+            msg : 'Cover Art'
           }
           ]
     }
