@@ -73,17 +73,17 @@ export default {
 <style>
 
 :root {
-  --bvt-primary-color: #6FEB95;
-  --bvt-bg-secondary: #4C8C65;
+  --bvt-primary-color: var(--main-accent);
+  --bvt-bg-secondary: var(--secondary-accent);
   --bvt-timeline-color: #ffffff;
-  --bvt-timeline-text-color: rgb(255, 255, 255);
+  --bvt-timeline-text-color: var(--text-color);
   --bvt-border-color: #16191d;
   --bvt-duration-color: var(--bvt-primary-color);
   --bvt-box-shadow1: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 }
 
 .timeline-content{
-  background-color: #282C34 !important;
+  background-color: var(--main-color) !important;
 }
 
 .scroll-area {

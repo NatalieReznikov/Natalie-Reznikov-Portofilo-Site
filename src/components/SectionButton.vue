@@ -64,7 +64,7 @@ export default {
     margin: 0 0 5px 0;
 }
 .UnderlineBar{
-    --MainColor: #6FEB95;
+    --MainColor: var(--main-accent);
     width: 100%;
     background-color: var(--MainColor);
     height: 3px;
