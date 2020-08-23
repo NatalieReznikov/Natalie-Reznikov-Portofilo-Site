@@ -24,6 +24,12 @@ export default {
           },
           {
             id : 2,
+            
+            msg : 'Publications'
+          },
+          {
+            id : 3,
+            
             msg : 'Cover Art'
           }
           ]

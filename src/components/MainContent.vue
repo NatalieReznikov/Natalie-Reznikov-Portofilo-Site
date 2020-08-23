@@ -2,10 +2,13 @@
     <div id="MainContent">
         <carousel :per-page="1" :paginationEnabled="false" @page-change="$emit('select',$event)" :value="activeID">
             <slide>
-                <home-page></home-page>
+                <home-page @go-next="$emit('select',activeID+1)" ></home-page>
             </slide>
             <slide>
                 <bio></bio>
+            </slide>
+            <slide>
+                <publictions></publictions>
             </slide>
             <slide>
                 <cover-art></cover-art>
@@ -19,6 +22,8 @@ import { Carousel, Slide } from 'vue-carousel';
 import HomePage from './sections/HomePage.vue';
 import Bio from './sections/Bio.vue';
 import CoverArt from './sections/CoverArt.vue';
+import Publictions from './sections/Publictions.vue';
+
 
 export default {
   name : "MainContent",
@@ -30,7 +35,8 @@ export default {
     Slide,
     HomePage,
     Bio,
-    CoverArt
+    Publictions,
+    CoverArt,
   }
 };
 </script>
