@@ -1,7 +1,7 @@
 <template>
     <div id="Publications">
         <div class="TextBox">
-            <vue-custom-scrollbar class="scroll-area"  :swipeEasing="true">
+            <vuescroll>
                 1.	Reznikov N, Buss DJ, Provencher B, McKee MD, Piché N. Deep learning and 3D imaging in structural biology. Review. <br>
                 J Struct Biol, 2020: 107598 (invited from conference selection, special issue) <a href="https://doi.org/10.1016/j.jsb.2020.107598"> https://doi.org/10.1016/j.jsb.2020.107598 </a> <br> 
                 <br> 2.	Buss DJ, Reznikov N, McKee MD. Crossfibrillar mineral tessellation in normal and Hyp mouse bone as revealed by 3D FIB-SEM microscopy. <br>
@@ -73,18 +73,28 @@
                 <br> 27.	Reznikov N, Barkana I, Abed Y, Har-Zion G, Redlich M. <br>
                 Influence of friction resistance on expression of superelastic properties of initial NiTi wires in "reduced friction" and conventional bracket systems. <br>
                 J Dent Biomech, 2010; 1:613142. <a href="http://dx.doi.org/10.4061/2010/613142"> http://dx.doi.org/10.4061/2010/613142 </a>
-            </vue-custom-scrollbar>
+            </vuescroll>
         </div>
     </div>
 </template>
 
 <script>
-import vueCustomScrollbar from 'vue-custom-scrollbar';
+import vuescroll from 'vuescroll/dist/vuescroll-native';
 
 export default {
 name : "Publications",
 components : {
-    vueCustomScrollbar,
+    vuescroll,
+},
+data : () => {
+    return {
+    ops: {
+          vuescroll: {detectResize: false},
+          scrollPanel: {},
+          rail: {},
+          bar: {}
+      },
+    }
 }
 };
 

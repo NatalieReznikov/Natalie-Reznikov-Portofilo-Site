@@ -1,27 +1,33 @@
 <template>
   <div id="Bio">
-    <vue-custom-scrollbar class="scroll-area"  :swipeEasing="true">
+    <vuescroll>
       <VueTimeline 
         :timeline-items="timelineItems" 
         :individualClasses="true"
       />
-    </vue-custom-scrollbar>
+    </vuescroll>
   </div>
 </template>
 
 <script>
 import VueTimeline from 'bs-vue-timeline';
-import vueCustomScrollbar from 'vue-custom-scrollbar';
+import vuescroll from 'vuescroll/dist/vuescroll-native';
 
 
 export default {
   name : "Bio",
   components : {
     VueTimeline,
-    vueCustomScrollbar
+    vuescroll
   },
   data : () => (
     {
+      ops: {
+          vuescroll: {detectResize: false},
+          scrollPanel: {},
+          rail: {},
+          bar: {}
+      },
       timelineItems: [
       {
         from: new Date(2018, 0),
@@ -86,11 +92,6 @@ export default {
   background-color: var(--main-color) !important;
 }
 
-.scroll-area {
-  position: relative;
-  width: calc(100% - 0px);
-  height: calc(100% - 0px);
-}
 .timeline-nodes:nth-child(odd) h3, .timeline-nodes:nth-child(odd) h2, .timeline-nodes:nth-child(odd) p{
   text-align: center !important;
 }

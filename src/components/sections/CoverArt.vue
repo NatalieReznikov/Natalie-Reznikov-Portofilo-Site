@@ -1,6 +1,6 @@
 <template>
     <div id="CoverArtSection">
-        <vue-custom-scrollbar class="scroll-area"  :swipeEasing="true">
+        <vuescroll>
             <div id="CoverArtArea">
                 <div class="Cover" v-for="cover in covers" :key="cover.id">
                     <img :src="cover.url" :class="{ first: cover.id==0, second: cover.id==1, third: cover.id==2}">
@@ -11,13 +11,12 @@
                     </div>
                 </div>
             </div>
-        </vue-custom-scrollbar>
+        </vuescroll>
     </div>
 </template>
 
 <script>
-
-import vueCustomScrollbar from 'vue-custom-scrollbar'
+import vuescroll from 'vuescroll/dist/vuescroll-native';
 
 import boneCover from "./../../assets/BoneCover2.png"
 import footBoneCover from "./../../assets/jbmr.2961.png"
@@ -27,6 +26,12 @@ import vortexCover from "./../../assets/jbmr.3764.png"
 export default {
 name : "CoverArt",
 data : () => ({
+    ops: {
+          vuescroll: {detectResize: false},
+          scrollPanel: {},
+          rail: {},
+          bar: {}
+      },
     covers : [
         {
             id : 0,
@@ -49,7 +54,7 @@ computed : {
 
 },
 components : {
-    vueCustomScrollbar
+    vuescroll
 }
 }
 </script>

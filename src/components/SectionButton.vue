@@ -50,7 +50,7 @@ export default {
 }
 
 .ButtonWrapper{
-    height: 43px;
+    height: 42px;
 }
 
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav-bar :activeID="activeID" :Slides="slides" @select="activeID = $event"></nav-bar>
-    <main-content :activeID="activeID" @select="activeID = $event"></main-content>
+    <main-content :activeID="activeID" @select="change_page($event)"></main-content>
   </div>
 </template>
 
@@ -38,6 +38,13 @@ export default {
   components: {
     NavBar, 
     MainContent
+  },
+  methods : {
+    change_page : function(msg) {
+      if (typeof(msg) == "number" &  3 >= msg >= 0){
+        this.activeID = msg;
+      }
+    }
   }
 }
 

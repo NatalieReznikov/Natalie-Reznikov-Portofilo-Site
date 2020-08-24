@@ -1,28 +1,32 @@
 <template>
     <div id="MainContent">
-        <carousel :per-page="1" :paginationEnabled="false" @page-change="$emit('select',$event)" :value="activeID">
-            <slide>
-                <home-page @go-next="$emit('select',activeID+1)" ></home-page>
-            </slide>
-            <slide>
+        <div ref="slider" class="keen-slider">
+            <div class="keen-slider__slide number-slide1">
+                <home-page @go-next="$emit('select', activeID+1)" ></home-page>
+            </div>
+            <div class="keen-slider__slide number-slide2">
                 <bio></bio>
-            </slide>
-            <slide>
+            </div>
+            <div class="keen-slider__slide number-slide3">
                 <publictions></publictions>
-            </slide>
-            <slide>
+            </div>
+            <div class="keen-slider__slide number-slide4">
                 <cover-art></cover-art>
-            </slide>
-        </carousel>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel';
+import "keen-slider/keen-slider.min.css";
+import KeenSlider from "keen-slider";
+
+
 import HomePage from './sections/HomePage.vue';
 import Bio from './sections/Bio.vue';
 import CoverArt from './sections/CoverArt.vue';
 import Publictions from './sections/Publictions.vue';
+
 
 
 export default {
@@ -31,12 +35,33 @@ export default {
       activeID : Number
   },
   components: {
-    Carousel,
-    Slide,
     HomePage,
     Bio,
     Publictions,
     CoverArt,
+  },
+  watch : {
+    activeID : function(newVal) {
+        this.slider.moveToSlideRelative(newVal, true);
+    }
+
+  },
+  data : () => {
+    return{
+        slider: null
+    }
+  },
+  mounted() {
+    this.slider = new KeenSlider(this.$refs.slider, {
+        initial: this.activeID,
+        afterChange : slider => {
+            this.$emit('select', slider.details().relativeSlide);
+        }
+    });
+    this.slider.controls(false);
+  },
+  beforeDestroy() {
+    if (this.slider) this.slider.destroy();
   }
 };
 </script>
@@ -46,8 +71,9 @@ export default {
     --padding : 0px;
     width: calc(100% - 2*var(--padding));
     height: calc(100% - 100px - 2*var(--padding));
-    background-image: url("../assets/New background v2.png");
-    background-size: contain;
+    background-color: #1F1F1F;
+    background-image: url("../assets/New background v3.png");
+    background-size: 10%;
     padding: var(--padding);
 }
 .VueCarousel{
@@ -57,10 +83,10 @@ export default {
 </style>
 
 <style>
-.VueCarousel-wrapper{
+.keen-slider{
     height: 100%;
 }
-.VueCarousel-inner{
+.keen-slider__slide{
     height: 100% !important;
 }
 </style>
