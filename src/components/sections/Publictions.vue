@@ -267,16 +267,4 @@ export default {
   top: 10%;
   left: 10%;
 }
-
-.TextBox a {
-  color: #6feb95;
-}
-
-.TextBox a:visited {
-  color: #4c8c65;
-}
-
-.TextBox a:hover {
-  color: #6feb95;
-}
 </style>

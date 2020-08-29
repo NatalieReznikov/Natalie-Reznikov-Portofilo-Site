@@ -70,4 +70,16 @@ export default {
   height: 100%;
   font-size: 30px;
 }
+
+a {
+  color: #6feb95 !important;
+}
+
+a:visited {
+  color: #4c8c65 !important;
+}
+
+a:hover {
+  color: #6feb95 !important;
+}
 </style>
