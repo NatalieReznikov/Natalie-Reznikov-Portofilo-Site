@@ -14,7 +14,7 @@
   "dependencies": {
     "bs-vue-timeline": "^0.1.4",
     "core-js": "^3.6.5",
-    "keen-slider": "^5.2.2",
+    "keen-slider": "^5.2.3",
     "patch-package": "^6.2.2",
     "vue": "^2.6.12",
     "vuescroll": "^4.16.1"

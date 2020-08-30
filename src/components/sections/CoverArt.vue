@@ -2,11 +2,31 @@
     <div id="CoverArtSection">
         <vuescroll>
             <div id="CoverArtArea">
-                <div class="Cover" v-for="cover in covers" :key="cover.id">
-                    <img :src="cover.url" :class="{ first: cover.id==0, second: cover.id==1, third: cover.id==2}">
+                <div class="Cover">
+                    <img :src="covers[0].url" class="first">
                     <div class="TextArea">
                         {{ 
-                        cover.description  
+                        covers[0].description  
+                        }}
+                    </div>
+                </div>
+                <div class="Cover">
+                    <img :src="covers[1].url" class="second">
+                    <div class="TextArea">
+                        {{ 
+                        covers[1].description  
+                        }}
+                    </div>
+                </div>
+                <div class="Cover">
+                    <img :src="covers[2].url" class="third">
+                    <div class="TextArea">
+                        {{ 
+                        covers[2].description  
+                        }}
+                        <a :href="covers[2].link">{{covers[2].link}}</a>
+                        {{
+                        covers[2].after
                         }}
                     </div>
                 </div>
@@ -46,8 +66,12 @@ data : () => ({
         {
             id : 2,
             url : footBoneCover,
-            description : "Golden Lotus. Top panels: three-dimensional reconstruction by micro-computed tomography of a bound foot (museum specimen, the Royal College of Surgeons, London, UK) showing anatomical structure and relationships for both soft tissues (orange) and skeletal elements (yellow). Bottom left: close-up view of the left foot of a 75 year old woman who had her feet deformed at the age of 7 years. Courtesy of Jo Farrell (Jo Farrell Photography, <a href=\"http://www.livinghistory.photography/\"> http://www.livinghistory.photography/ </a>). Bottom right: an embroidered “Golden Lotus” shoe occasionally worn by a woman having bound feet (courtesy of the Museums at the Royal College of Surgeons, London, UK).",
+            description : "Golden Lotus. Top panels: three-dimensional reconstruction by micro-computed tomography of a bound foot (museum specimen, the Royal College of Surgeons, London, UK) showing anatomical structure and relationships for both soft tissues (orange) and skeletal elements (yellow). Bottom left: close-up view of the left foot of a 75 year old woman who had her feet deformed at the age of 7 years. Courtesy of Jo Farrell (Jo Farrell Photography,",
+            link : "http://www.livingherstoryphotography.com",
+            after: "). Bottom right: an embroidered “Golden Lotus” shoe occasionally worn by a woman having bound feet (courtesy of the Museums at the Royal College of Surgeons, London, UK).",
         }
+
+
     ]
 }),
 computed : {
@@ -70,11 +94,10 @@ components : {
 #CoverArtArea{
     display: grid;
     width: 100%;
-    height: 120%;
-    grid-template-columns: 30% 30% 30%;
-    column-gap: 5%;
-    row-gap: 10%;
+    height: 100%;
     grid-template-rows: 100%;
+    grid-template-columns: min((100vh - 200px) / 1.3382, 30%) min((100vh - 200px) / 1.3382, 30%) min((100vh - 200px) / 1.3382, 30%);
+    column-gap: max(5%, 50vw - 112.1vh + 174.2px );
 }
 
 .Cover{
@@ -91,9 +114,10 @@ components : {
 }
 
 .TextArea{
+    padding: 5px;
     background-color: var(--main-color);
     border-radius: 0px 0px 5px 5px;
-    font-size: 12px;
+    font-size: min(0.75vw, 18px);
 }
 
 </style>
