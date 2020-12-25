@@ -14,7 +14,9 @@ export default {
   data :  function() {
     return {
       activeID : 0,
-      slides : [{
+      slides :
+        [
+          {
             id : 0,
             msg : 'Home Page'
           },
@@ -24,15 +26,17 @@ export default {
           },
           {
             id : 2,
-            
             msg : 'Publications'
           },
           {
             id : 3,
-            
             msg : 'Cover Art'
+          },
+          {
+            id : 4,
+            msg : 'Contact Info'
           }
-          ]
+        ]
     }
   },
   components: {
@@ -76,7 +80,7 @@ a {
 }
 
 a:visited {
-  color: #4c8c65 !important;
+  color: #0dc450 !important;
 }
 
 a:hover {
