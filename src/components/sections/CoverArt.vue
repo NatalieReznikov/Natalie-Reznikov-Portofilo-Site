@@ -2,40 +2,16 @@
     <div id="CoverArtSection">
         <vuescroll>
             <div id="CoverArtArea">
-                <div class="Cover">
-                    <img :src="covers[0].url" class="first">
-                    <div class="TextArea">
-                        {{ 
-                        covers[0].description  
-                        }}
-                    </div>
-                </div>
-                <div class="Cover">
-                    <img :src="covers[1].url" class="second">
-                    <div class="TextArea">
-                        {{ 
-                        covers[1].description  
-                        }}
-                    </div>
-                </div>
-                <div class="Cover">
-                    <img :src="covers[2].url" class="third">
-                    <div class="TextArea">
-                        {{ 
-                        covers[2].description  
-                        }}
-                        <a :href="covers[2].link">{{covers[2].link}}</a>
-                        {{
-                        covers[2].after
-                        }}
-                    </div>
-                </div>
+                <cover v-for="cover in Covers" :key="cover.id" :url="cover.url" :description="cover.description">
+                </cover>
             </div>
         </vuescroll>
     </div>
 </template>
 
 <script>
+import Cover from '../Cover.vue'
+
 import vuescroll from 'vuescroll/dist/vuescroll-native';
 
 import boneCover from "./../../assets/BoneCover2.png"
@@ -51,35 +27,29 @@ data : () => ({
           scrollPanel: {},
           rail: {},
           bar: {}
-      },
-    covers : [
+    },
+    Covers : [
         {
             id : 0,
             url : boneCover,
-            description : "Ions such as calcium and phosphate are used in myriad key metabolic processes, and are central to life itself. However, their abundance and propensity to adversely precipitate as mineral requires a generalized inhibition. Selective removal of such inhibition (“inhibiting the inhibitor”) to allow mineralization can be used to define the size, shape and layout of an organism (from in utero through to adulthood). As part of this process there is the third tier of mineralization regulation – the fine interfacial enzyme-stenciling control that provides refinement for mechanical resilience, metabolic responsiveness, morphological precision and sensitivity to loading, to name a few, that apparently can distinguish life from death, and health from disease.",
+            description : "<div>Ions such as calcium and phosphate are used in myriad key metabolic processes, and are central to life itself. However, their abundance and propensity to adversely precipitate as mineral requires a generalized inhibition. Selective removal of such inhibition (“inhibiting the inhibitor”) to allow mineralization can be used to define the size, shape and layout of an organism (from in utero through to adulthood). As part of this process there is the third tier of mineralization regulation – the fine interfacial enzyme-stenciling control that provides refinement for mechanical resilience, metabolic responsiveness, morphological precision and sensitivity to loading, to name a few, that apparently can distinguish life from death, and health from disease.</div>",
         },
         {
             id : 1,
             url : vortexCover,
-            description : "Vortex by Object Research Systems. This image shows the interior of a proximal femur of a sheep. The specimen was imaged usingmicro-computed tomography, and then surface-rendered using Dragonfly software. The spiraling orientation of the trabecular trusses, andthe transition of trabecular texture from a robust to a delicate fabric, create an impression of a dynamic vortex within the bone’s interior.",
+            description : "<div>Vortex by Object Research Systems. This image shows the interior of a proximal femur of a sheep. The specimen was imaged usingmicro-computed tomography, and then surface-rendered using Dragonfly software. The spiraling orientation of the trabecular trusses, andthe transition of trabecular texture from a robust to a delicate fabric, create an impression of a dynamic vortex within the bone’s interior.</div>",
         },
         {
             id : 2,
             url : footBoneCover,
-            description : "Golden Lotus. Top panels: three-dimensional reconstruction by micro-computed tomography of a bound foot (museum specimen, the Royal College of Surgeons, London, UK) showing anatomical structure and relationships for both soft tissues (orange) and skeletal elements (yellow). Bottom left: close-up view of the left foot of a 75 year old woman who had her feet deformed at the age of 7 years. Courtesy of Jo Farrell (Jo Farrell Photography,",
-            link : "http://www.livingherstoryphotography.com",
-            after: "). Bottom right: an embroidered “Golden Lotus” shoe occasionally worn by a woman having bound feet (courtesy of the Museums at the Royal College of Surgeons, London, UK).",
+            description : "<div>Golden Lotus. Top panels: three-dimensional reconstruction by micro-computed tomography of a bound foot (museum specimen, the Royal College of Surgeons, London, UK) showing anatomical structure and relationships for both soft tissues (orange) and skeletal elements (yellow). Bottom left: close-up view of the left foot of a 75 year old woman who had her feet deformed at the age of 7 years. Courtesy of Jo Farrell (Jo Farrell Photography, <a href=http://www.livingherstoryphotography.com>http://www.livingherstoryphotography.com</a>). Bottom right: an embroidered “Golden Lotus” shoe occasionally worn by a woman having bound feet (courtesy of the Museums at the Royal College of Surgeons, London, UK).</div>",
         }
-
-
-    ]
-}),
-computed : {
-
-},
-components : {
-    vuescroll
-}
+    ],
+    }),
+    components : {
+        vuescroll,
+        Cover
+    }
 }
 </script>
 
@@ -95,29 +65,9 @@ components : {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-rows: 100%;
-    grid-template-columns: min((100vh - 200px) / 1.3382, 30%) min((100vh - 200px) / 1.3382, 30%) min((100vh - 200px) / 1.3382, 30%);
-    column-gap: max(5%, 50vw - 112.1vh + 174.2px );
-}
-
-.Cover{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto 1fr 20px;
-    height: 100%;
-}
-
-
-.Cover img{
-    display: inline-block;
-    width: 100%
-}
-
-.TextArea{
-    padding: 5px;
-    background-color: var(--main-color);
-    border-radius: 0px 0px 5px 5px;
-    font-size: min(0.75vw, 18px);
+    grid-template: '.   .   .' 1fr /
+                    1fr 1fr 1fr;
+    column-gap: max(5%, 50px );
 }
 
 </style>
