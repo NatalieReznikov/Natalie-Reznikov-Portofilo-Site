@@ -85,6 +85,7 @@ export default {
 <style>
 .keen-slider{
     height: 100%;
+    user-select: unset;
 }
 .keen-slider__slide{
     height: 100% !important;
