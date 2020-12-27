@@ -35,12 +35,12 @@ data : () => ({
         {
             id : 0,
             url : journalSBC2,
-            description : "<div>The cover refers to the article “Deep learning for 3D imaging and image analysis in biomineralization research” <a href=https://doi.org/10.1016/j.jsb.2020.107598>https://doi.org/10.1016/j.jsb.2020.107598</a> by Reznikov et al. in this issue of Journal of Structural Biology.</div>",
+            description : "<div>The cover refers to the article “Deep learning for 3D imaging and image analysis in biomineralization research” <a href=https://doi.org/10.1016/j.jsb.2020.107598>https://doi.org/10.1016/j.jsb.2020.107598</a> by Reznikov et al. in this issue of <em>Journal of Structural Biology</em>.</div>",
         },
         {
             id : 1,
             url : journalSBC3,
-            description : "<div>The cover refers to the article “Deep learning for 3D imaging and image analysis in biomineralization research” <a href=https://doi.org/10.1016/j.jsb.2020.107598>https://doi.org/10.1016/j.jsb.2020.107598</a> by Reznikov et al. in this issue of Journal of Structural Biology.</div>",
+            description : "<div>The cover refers to the article “Deep learning for 3D imaging and image analysis in biomineralization research” <a href=https://doi.org/10.1016/j.jsb.2020.107598>https://doi.org/10.1016/j.jsb.2020.107598</a> by Reznikov et al. in this issue of <em>Journal of Structural Biology</em>.</div>",
         },
         {
             id : 2,
