@@ -13,6 +13,9 @@
             <div class="keen-slider__slide number-slide4">
                 <cover-art></cover-art>
             </div>
+            <div class="keen-slider__slide number-slide4">
+                <contact-info></contact-info>
+            </div>
         </div>
     </div>
 </template>
@@ -24,8 +27,10 @@ import KeenSlider from "keen-slider";
 
 import HomePage from './sections/HomePage.vue';
 import Bio from './sections/Bio.vue';
-import CoverArt from './sections/CoverArt.vue';
 import Publictions from './sections/Publictions.vue';
+import CoverArt from './sections/CoverArt.vue';
+import ContactInfo from './sections/ContactInfo.vue';
+
 
 
 
@@ -39,6 +44,7 @@ export default {
     Bio,
     Publictions,
     CoverArt,
+    ContactInfo,
   },
   watch : {
     activeID : function(newVal) {
