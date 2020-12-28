@@ -1,6 +1,6 @@
 <template>
     <div id="CoverArtSection">
-        <vuescroll>
+        <vuescroll :ops="ops">
             <div id="CoverArtArea">
                 <cover v-for="cover in Covers" :key="cover.id" :url="cover.url" :description="cover.description">
                 </cover>
@@ -26,10 +26,16 @@ export default {
 name : "CoverArt",
 data : () => ({
     ops: {
-          vuescroll: {detectResize: false},
-          scrollPanel: {},
-          rail: {},
-          bar: {}
+        vuescroll: {detectResize: false},
+        scrollPanel: {},
+        rail: {
+          keepShow : true,
+          opacity : 0
+        },
+        bar: {
+          onlyShowBarOnScroll : false,
+          keepShow : true
+        }
     },
     Covers : [
         {
@@ -45,7 +51,7 @@ data : () => ({
         {
             id : 2,
             url : journalSBC,
-            description : "<div>Golden Lotus. Top panels: three-dimensional reconstruction by micro-computed tomography of a bound foot (museum specimen, the Royal College of Surgeons, London, UK) showing anatomical structure and relationships for both soft tissues (orange) and skeletal elements (yellow). Bottom left: close-up view of the left foot of a 75 year old woman who had her feet deformed at the age of 7 years. Courtesy of Jo Farrell (Jo Farrell Photography, <a href=http://www.livingherstoryphotography.com>http://www.livingherstoryphotography.com</a>). Bottom right: an embroidered “Golden Lotus” shoe occasionally worn by a woman having bound feet (courtesy of the Museums at the Royal College of Surgeons, London, UK).</div>",
+            description : "<div>Tessellation of micrometer-sized, irregular mineral ellipsoids in the extracellular matrix of bone is a unique functional arrangement within its structural hierarchy.  FIB-SEM serial-surface-view imaging.</div>",
         },
         {
             id : 3,
@@ -61,8 +67,7 @@ data : () => ({
             id : 5,
             url : footBoneCover,
             description : "<div>Golden Lotus. Top panels: three-dimensional reconstruction by micro-computed tomography of a bound foot (museum specimen, the Royal College of Surgeons, London, UK) showing anatomical structure and relationships for both soft tissues (orange) and skeletal elements (yellow). Bottom left: close-up view of the left foot of a 75 year old woman who had her feet deformed at the age of 7 years. Courtesy of Jo Farrell (Jo Farrell Photography, <a href=http://www.livingherstoryphotography.com>http://www.livingherstoryphotography.com</a>). Bottom right: an embroidered “Golden Lotus” shoe occasionally worn by a woman having bound feet (courtesy of the Museums at the Royal College of Surgeons, London, UK).</div>",
-        },
-        
+        }
     ],
     }),
     components : {
@@ -84,11 +89,10 @@ data : () => ({
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template:  '.   .   .' 1fr
-                    '.   .   .' 1fr  /
+    grid-template: '.   .   .' 1fr /
                     1fr 1fr 1fr;
     row-gap: max(1%, 10px);
-    column-gap: max(5%, 50px );
+    column-gap: max(5%, 50px);
 }
 
 </style>
