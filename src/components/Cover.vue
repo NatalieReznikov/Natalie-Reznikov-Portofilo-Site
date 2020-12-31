@@ -46,7 +46,7 @@ export default {
 
 .TextArea svg{
   top: 0px;
-  margin: 1px auto 1px auto;
+  margin: 0px auto 5px auto;
   display: block;
   position: relative;
 }
@@ -60,7 +60,7 @@ export default {
   right: auto;
   left: auto;
   width: 100%;
-  bottom: 21px;
+  bottom: 20px;
   transform: translateY(100%);
   transition-duration: 300ms;
 }
